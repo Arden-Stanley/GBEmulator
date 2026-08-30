@@ -1,5 +1,6 @@
 #ifndef CPU_H
 #define CPU_H
+#include "bus.h"
 #include <stdint.h>
 
 typedef struct {
@@ -35,6 +36,6 @@ typedef struct {
   uint16_t pc;
 } CPU;
 
-void (*op)(CPU *cpu);
+uint8_t cpu_step(CPU *cpu, Bus *bus);
 
 #endif
