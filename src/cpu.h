@@ -35,4 +35,6 @@ typedef struct {
   uint16_t pc;
 } CPU;
 
+void (*op)(CPU *cpu);
+
 #endif
