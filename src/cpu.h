@@ -36,6 +36,10 @@ typedef struct {
   uint16_t pc;
 } CPU;
 
+// naming convention: op_[operation]_[dest]_[src]
+static void op_ld8_reg_imm(CPU *cpu, Bus *bus, uint8_t *reg);
+static void op_ld16_reg_imm(CPU *cpu, Bus *bus, uint16_t *reg);
+
 uint8_t cpu_step(CPU *cpu, Bus *bus);
 
 #endif
