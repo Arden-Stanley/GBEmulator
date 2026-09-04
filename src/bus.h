@@ -4,6 +4,11 @@
 #include <stdint.h>
 
 typedef struct {
+  uint8_t *rom;
+  uint32_t rom_size;
+  uint8_t *ext_ram;
+  uint32_t ext_ram_size;
+
   uint8_t vram[0x2000];
   uint8_t wram[0x2000];
   uint8_t oam[0x0A0];
