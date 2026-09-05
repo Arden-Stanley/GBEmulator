@@ -40,9 +40,9 @@ typedef struct {
 // naming convention: op_[operation]_[dest]_[src]
 static void op_ld8_reg_imm(CPU *cpu, Bus *bus, uint8_t *reg);
 static void op_ld16_reg_imm(CPU *cpu, Bus *bus, uint16_t *reg);
-static void op_ld8_reg_reg(CPU *cpu, uint8_t *reg_dest, uint8_t reg_src);
-static void op_ld8_mem_reg(CPU *cpu, Bus *bus, uint16_t addr, uint8_t data);
-static void op_ld8_reg_mem(CPU *cpu, Bus *bus, uint16_t addr, uint8_t *reg);
+static void op_ld8_reg_reg(uint8_t *reg_dest, uint8_t reg_src);
+static void op_ld8_mem_reg(Bus *bus, uint16_t addr, uint8_t data);
+static void op_ld8_reg_mem(Bus *bus, uint16_t addr, uint8_t *reg);
 static void op_ld8_mem_imm(CPU *cpu, Bus *bus, uint16_t addr);
 static void op_inc8_reg(uint8_t *reg);
 static void op_inc16_reg(uint16_t *reg);
